@@ -8,11 +8,14 @@ public class BallonController : MonoBehaviour
     public float speed = 2.5f;
     public Animator anim;
     public string animAD;
+    public AudioSource ses;
+    public AudioClip[] clip;
     
    
     void Start()
     {
-        
+      
+        ses = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -24,9 +27,11 @@ public class BallonController : MonoBehaviour
     private void OnMouseDown()
     {
 
-
+        Destroy(this.gameObject, 0.4f);
         anim.Play(animAD);
-        
-        Destroy(this.gameObject,0.4f);
+       
+           
+        AudioClip rastgeleses = clip[Random.Range(0, clip.Length)];
+        ses.PlayOneShot(rastgeleses);
     }
 }

@@ -10,7 +10,6 @@ public class balloonSpawner : MonoBehaviour
     float currentTime = 0;
     void Start()
     {
-
     }
 
     void Update()
@@ -19,8 +18,10 @@ public class balloonSpawner : MonoBehaviour
         if (currentTime >= maxTime)
         {
             currentTime = 0;
-            Instantiate(Balloons[Random.Range(0,Balloons.Length)],
+            GameObject newballon= Instantiate(Balloons[Random.Range(0,Balloons.Length)],
                 new Vector3(Random.Range(min,max),this.transform.position.y,0),Quaternion.identity);
+            Destroy(newballon, 8f);
+
         }
     }
 }
