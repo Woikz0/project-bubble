@@ -10,6 +10,7 @@ public class BallonController : MonoBehaviour
     public string animAD;
     public AudioSource ses;
     public AudioClip[] clip;
+    bool isClicked = false;
     
    
     void Start()
@@ -26,12 +27,14 @@ public class BallonController : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        if(isClicked==false)
+        {
+            anim.Play(animAD);
+            AudioClip rastgeleses = clip[Random.Range(0, clip.Length)];
+            ses.PlayOneShot(rastgeleses);
+            Destroy(this.gameObject, 0.4f);
+            isClicked = true;
+        }
 
-        Destroy(this.gameObject, 0.4f);
-        anim.Play(animAD);
-       
-           
-        AudioClip rastgeleses = clip[Random.Range(0, clip.Length)];
-        ses.PlayOneShot(rastgeleses);
     }
 }
