@@ -18,22 +18,22 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void pause()
-    {
-        if (acik == false)
-        {
-            Time.timeScale = 0f;
-            pausePanel.SetActive(true);
-            acik = true;
-        }
-        else
-        {
-            Time.timeScale = 1f;
-            pausePanel.SetActive(false);
-            acik = false;
-        }
+    //public void pause()
+    //{
+    //    if (acik == false)
+    //    {
+    //        Time.timeScale = 0f;
+    //        pausePanel.SetActive(true);
+    //        acik = true;
+    //    }
+    //    else
+    //    {
+    //        Time.timeScale = 1f;
+    //        pausePanel.SetActive(false);
+    //        acik = false;
+    //    }
 
-    }
+    //}
 
     
 }
