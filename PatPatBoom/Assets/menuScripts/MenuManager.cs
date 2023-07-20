@@ -8,7 +8,16 @@ public class MenuManager : MonoBehaviour
 {
     public GameObject settingBoard;
     public GameObject levelboard;
-    
+    public AudioSource bgMusic;
+    public Text valumeAmount;
+    public Slider volumeSlider;
+    bool acikm›;
+    bool lvlAcikM›;
+
+    private void Start()
+    {
+          volumeSlider.value = PlayerPrefs.GetFloat("volume");
+    }
 
     public void PlayButton() 
     {
@@ -18,7 +27,18 @@ public class MenuManager : MonoBehaviour
 
     public void SettingsBoardButton()
     {
+        if (acikm› == false) 
+        {
         settingBoard.SetActive(true);
+            acikm› = true;
+
+        }
+        else
+        {
+            settingBoard.SetActive(false);
+            acikm›= false;
+        }
+
     }
 
     public void CloseButton()
@@ -26,22 +46,32 @@ public class MenuManager : MonoBehaviour
         settingBoard.SetActive(false);
     }
 
-    public Text valumeAmount;
+   
     public void SetAudio(float value)
     {
-        AudioListener.volume = value;
-        valumeAmount.text=((int)(value * 100)).ToString();
+        bgMusic.volume = value/100;
+        PlayerPrefs.SetFloat("volume", value);
+        valumeAmount.text = PlayerPrefs.GetFloat("volume").ToString();
+        PlayerPrefs.Save();
     }
     
     public void levelPanel()
     {
-        levelboard.SetActive(true);
+       if(lvlAcikM›==false)
+        {
+            levelboard.SetActive(true);
+            lvlAcikM› = true;
+        }
+        else
+        {
+            levelboard.SetActive(false);
+            lvlAcikM›= false;
+        }
+        
+       
     }
 
-    public void levleboardclose()
-    {
-        levelboard.SetActive(false);
-    }
+   
 
 
     public void level1()
