@@ -13,11 +13,6 @@ public class BallonController : MonoBehaviour
     public AudioSource ses;
     public AudioClip[] clip;
     bool isClicked = false;
-   
-
-
-
-
 
     void Start()
     {
@@ -41,7 +36,7 @@ public class BallonController : MonoBehaviour
             ses.PlayOneShot(rastgeleses);
             balloonSpawner.instance.BallonArttir();
             Destroy(this.gameObject, 0.4f);
-            
+
             isClicked = true;
 
 

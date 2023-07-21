@@ -7,8 +7,9 @@ public class StarController : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float speed;
-    bool isClicked = false;
+    private bool isClicked = false;
     public Text starText;
+
     void Start()
     {
         
@@ -23,9 +24,10 @@ public class StarController : MonoBehaviour
     {
         if(!isClicked&& Time.timeScale > 0f)
         {
-            starText.text = 1.ToString();
+            //starText.text = 1.ToString();
+            Destroy(this.gameObject, 0.4f);
+            isClicked=true;
 
-            Destroy(this.gameObject);
         }
     }
 }

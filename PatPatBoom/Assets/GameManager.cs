@@ -13,21 +13,21 @@ public class GameManager : MonoBehaviour
     {
 
     }
-   /* void Update()
-    {
-        rb.velocity = new Vector2(0, speed);
+    //void Update()
+    //{
+    //    rb.velocity = new Vector2(0, speed);
 
-    }
-    private void OnMouseDown()
-    {
-        if (!isClicked && Time.timeScale > 0f)
-        {
-            starText.text = 1.ToString();
+    //}
+    //private void OnMouseDown()
+    //{
+    //    if (!isClicked && Time.timeScale > 0f)
+    //    {
+    //        starText.text = 1.ToString();
 
-            Destroy(this.gameObject);
-        }
-    }
+    //        Destroy(this.gameObject);
+    //    }
+    //}
 
-    */
+
 
 }

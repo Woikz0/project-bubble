@@ -23,16 +23,30 @@ public class balloonSpawner : MonoBehaviour
         balloonCount = 0;
     }
 
+
+    private int spawnCount = 0;
     private void Star()
     {
-    
-        switch (balloonCount)
+
+        //switch (balloonCount)
+        //{
+        //    case 15:
+        //        randomSpawn(star);
+        //        break;
+        //}
+        if (balloonCount == 15 || balloonCount == 30 || balloonCount == 45)
         {
-            case 3:
-                randomSpawn(star);
-                break;
+            randomSpawn(star);
+            spawnCount++;
         }
+
+
+
     }
+
+
+
+
     void randomSpawn(GameObject spawnObject)
     {
         currentTime = 0;
