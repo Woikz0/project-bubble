@@ -1,33 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.GlobalIllumination;
+using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class StarController : MonoBehaviour
 {
-    bool acik = false;
-    public GameObject pausePanel;
-    
-    
+    public Rigidbody2D rb;
+    public float speed;
+    bool isClicked = false;
+    public Text starText;
     void Start()
     {
-
+        
     }
+
     void Update()
     {
-        rb.velocity = new Vector2(0, speed);
-
+        rb.velocity = new Vector2(0,speed);
+        
     }
     private void OnMouseDown()
     {
-        if (!isClicked && Time.timeScale > 0f)
+        if(!isClicked&& Time.timeScale > 0f)
         {
             starText.text = 1.ToString();
 
             Destroy(this.gameObject);
         }
     }
-
-
-
 }
