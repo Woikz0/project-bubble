@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     {
 
     }
-    void Update()
+   /* void Update()
     {
         rb.velocity = new Vector2(0, speed);
 
@@ -28,6 +28,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
+    */
 
 }
