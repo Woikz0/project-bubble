@@ -11,14 +11,22 @@ public class BallonController : MonoBehaviour
     public AudioSource ses;
     public AudioClip[] clip;
     bool isClicked = false;
+    public GameObject DeadPanel;
+
     
-
-
 
     void Start()
     {
       
         ses = GetComponent<AudioSource>();
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "DeadArea")
+        {
+            Debug.Log("etki");
+            DeadPanel.SetActive(true);
+        }
     }
 
     void Update()

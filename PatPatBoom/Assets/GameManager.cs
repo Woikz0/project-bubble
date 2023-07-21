@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     bool acik = false;
     public GameObject pausePanel;
+    
+    
     void Start()
     {
 
@@ -17,23 +19,8 @@ public class GameManager : MonoBehaviour
 
     }
 
-
-    //public void pause()
-    //{
-    //    if (acik == false)
-    //    {
-    //        Time.timeScale = 0f;
-    //        pausePanel.SetActive(true);
-    //        acik = true;
-    //    }
-    //    else
-    //    {
-    //        Time.timeScale = 1f;
-    //        pausePanel.SetActive(false);
-    //        acik = false;
-    //    }
-
-    //}
+    
 
     
+
 }

@@ -8,9 +8,12 @@ public class balloonSpawner : MonoBehaviour
     public GameObject[] Balloons;
     public float maxTime;
     float currentTime = 0;
-    void Start()
-    {
-    }
+   
+
+
+
+   
+    
 
     void Update()
     {
